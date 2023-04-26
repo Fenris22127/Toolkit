@@ -33,7 +33,7 @@ repositories {
 }
 
 dependencies {
-    implementation files("src/main/resources/CustomLogger-1.0-SNAPSHOT.jar")
+    implementation files("src/main/resources/de/toolkit/logging/colorlogger/ColorLogger.jar")
 
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
