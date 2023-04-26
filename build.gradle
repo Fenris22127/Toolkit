@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'de.medieninformatik.swz'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+application {
+    mainClassName = 'de.medieninformatik.swz.Main'
+}
+
+ext {
+    junitVersion = '5.9.1'
+    log4jVersion = '2.20.0'
+    jacksonVersion = '2.14.2'
+}
+
+run {
+    standardInput = System.in
+    standardOutput = System.out
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation files("src/main/resources/CustomLogger-1.0-SNAPSHOT.jar")
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+
+    implementation "org.apache.logging.log4j:log4j-api:${log4jVersion}"
+    implementation "org.apache.logging.log4j:log4j-core:${log4jVersion}"
+
+    implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}"
+    implementation "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
+}
+
+test {
+    useJUnitPlatform()
+}
