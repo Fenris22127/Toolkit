@@ -33,7 +33,7 @@ repositories {
 }
 
 dependencies {
-    implementation files("src/main/resources/de/toolkit/logging/colorlogger/ColorLogger.jar")
+    implementation files("src/main/resources/de/toolkit/logging/colorlogger/ColorLogger-v2.jar")
 
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
