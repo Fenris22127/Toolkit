@@ -3,14 +3,14 @@ plugins {
     id 'application'
 }
 
-group 'de.medieninformatik.swz'
-version '1.0-SNAPSHOT'
+group 'de.toolkit'
+version '1.1-SNAPSHOT'
 
 sourceCompatibility = '17'
 targetCompatibility = '17'
 
 application {
-    mainClassName = 'de.medieninformatik.swz.Main'
+    mainClassName = 'de.toolkit.main.Main'
 }
 
 ext {
